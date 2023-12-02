@@ -17,7 +17,7 @@
 struct data
 {
 	char data;
-	int (*f)(va_list, char[]);
+	int (*f(char format)(va_list, char*, int*);
 };
 
 
@@ -27,12 +27,11 @@ struct data
  * @data: The format.
  * @data_type: The function associated.
  */
-typedef struct data data_type;
 
 
 /* functions Prototypes */
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int handle_content(const char *data, va_list args, char content[]);
+int handle_content(const char *data, int index, va_list args, char content[]);
 #endif
