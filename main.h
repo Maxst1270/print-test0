@@ -6,5 +6,5 @@
 #include <stdarg.h>;
 int _putchar(char c);
 int _printf(const char *format, ...);
-
+int handle-content(char *format, va_list args, char content[]);
 #endif
