@@ -8,7 +8,8 @@
 
 int _printf(const char *format, ...)
 {
-	int chars = 0;
+	int chars = 0, outpu = 0;
+	char cont_array[];
 	va_list args;
 
 	va_start(args, format);
