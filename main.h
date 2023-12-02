@@ -29,12 +29,10 @@ struct data
  */
 typedef struct data data_type;
 
-int _printf(const char *format, ...);
-int handle_print(const char *data, va_list args, char buffer[]);
 
 /* functions Prototypes */
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int handle-content(char *format, va_list args, char content[]);
+int handle_content(const char *data, va_list args, char content[]);
 #endif
