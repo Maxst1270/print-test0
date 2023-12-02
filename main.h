@@ -5,7 +5,7 @@
 #include <stdlib.h>;
 #include <stdarg.h>;
 
-
+#define CONT_SIZE 1024
 
 /**
  * struct data - Struct op

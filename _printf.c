@@ -9,9 +9,9 @@
 int _printf(const char *format, ...)
 {
 	int chars = 0, outpu = 0;
-	char content[];
+	char content[CONT_SIZE];
 	va_list args;
-
+	
 	va_start(args, format);
 
 	while (*format != NULL)
@@ -21,10 +21,8 @@ int _printf(const char *format, ...)
 			write(1, format, 1);
 			chars++;
 		}
-		*format++;
-		if (*format == '\0')
-			break;
-		else if
+		format++;
+		else 
 		{
 			cont_array(content, &cont_index);
 			output = handle_content(format, args);
@@ -45,6 +43,6 @@ void cont_array(char content[], int *cont_index)
 {
 	if (*cont_array > 0)
 		write(1, &content[0], *cont_array);
-	cont_array = 0;
+	cont_index = 0;
 }
 
