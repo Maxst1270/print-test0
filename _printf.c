@@ -21,10 +21,10 @@ int _printf(const char *format, ...)
 			write(1, format, 1);
 			chars++;
 		}
-		format++;
 		else 
 		{
 			cont_array(content, &cont_index);
+			format++;
 			output = handle_content(format, args);
 			chars += output;
 		}
