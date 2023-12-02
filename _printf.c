@@ -23,8 +23,8 @@ int _printf(const char *format, ...)
 		}
 		else 
 		{
-			cont_array(content, &cont_index);
 			format++;
+			cont_array(content, &cont_index);
 			output = handle_content(format, args);
 			chars += output;
 		}
