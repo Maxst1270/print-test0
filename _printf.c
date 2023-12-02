@@ -3,13 +3,14 @@
 /**
  * _printf - is a print function
  * @format: specific format
- * Return: characters that are printed
-*/ 
+ * Return: chars
+*/
 
 int _printf(const char *format, ...)
 {
 	int chars = 0;
 	va_list args;
+
 	va_start(args, format);
 
 	while (*format != NULL)
@@ -21,30 +22,28 @@ int _printf(const char *format, ...)
 		}
 		*format++;
 		if (*format == '\0')
-		    break;
-		else
+			break;
+		else if
 		{
-	        	cont-array(content, &cont-index);
-	       		output = handle-content(format, args);
-	       		chars += output;
+			cont_array(content, &cont_index);
+			output = handle_content(format, args);
+			chars += output;
 		}
 	}
-	cont-array(content, &cont-index);
+	cont_array(content, &cont_index);
 	va_end(args);
 	return (chars);
 }
 
 /**
- * cont-array - Prints the contents of the buffer if it exist
+ * cont_array - Prints the contents of the buffer if it exist
  * @content: Array of chars
- * @cont-arraye: Index at which to add next char.
+ * @cont_index: Index at which to add next char.
 */
-void cont-array(char content[], int *cont-index)
+void cont_array(char content[], int *cont_index)
 {
-	if (*cont-array > 0)
-		write(1, &content[0], *cont-array);
-	cont-array = 0;
+	if (*cont_array > 0)
+		write(1, &content[0], *cont_array);
+	cont_array = 0;
 }
- 
-	    
 
