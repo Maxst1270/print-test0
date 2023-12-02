@@ -1,13 +1,10 @@
 #include"main.h"
 
-
 int _printf(const char *format, ...)
 {
 	int chars = 0;
 	va_list args;
-	char content[];
 	va_start(args, format);
-
 	while (*format != NULL)
 	{
 		if (*format != ' %')
@@ -38,3 +35,4 @@ int _printf(const char *format, ...)
  }
  
 	    
+
