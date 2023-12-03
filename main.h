@@ -4,6 +4,7 @@
 #include <stdio.h>;
 #include <stdlib.h>;
 #include <stdarg.h>;
+#include <unistd.h>
 
 #define CONT_SIZE 1024
 
@@ -34,4 +35,9 @@ struct data
 int _putchar(char c);
 int _printf(const char *format, ...);
 int handle_content(const char *data, int index, va_list args, char content[]);
+int handle_write_char(char c, char content);
+int print_char(va_list args, char content[]);
+int print_string(va_list args, char content[]);
+int print_percent(va_list args, char content[]);
+
 #endif
