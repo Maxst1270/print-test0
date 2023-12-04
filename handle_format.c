@@ -17,6 +17,8 @@ int handle_content(const char *data,  int *index, va_list args, char content[])
 		{'c', print_char},
 		{'s', print_string},
 		{'%', print_percent},
+		{'i', print_int},
+		{'d', print_int},
 		{'\0', NULL}
 	};
 	for (i = 0; data_type[i].data!= '\0'; i++)
